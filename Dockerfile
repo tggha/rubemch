@@ -3,7 +3,7 @@ MAINTAINER dev@jpillora.com
 # prepare go env
 ENV GOPATH /go
 ENV NAME cloud-torrent
-ENV PACKAGE github.com/jpillora/$NAME
+ENV PACKAGE github.com/rubenmch/$NAME
 ENV PACKAGE_DIR $GOPATH/src/$PACKAGE
 ENV GOLANG_VERSION 1.8.1
 ENV GOLANG_SRC_URL https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz
