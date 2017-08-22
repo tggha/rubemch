@@ -25,6 +25,7 @@
     <img ng-if="imagePreview" ng-src="{{ showPreview ? ('download/'+node.$path) : '' }}">
     <video controls autoplay ng-if="videoPreview">
       <source ng-src="{{ showPreview ? ('download/'+node.$path) : '' }}">
+      <track ng-src="{{ showPreview ? ('download/'+node.$path.replace('.mp4', '.spa.srt')) : '' }}" kind="subtitles" srclang="es" label="Spanish">
     </video>
   </div>
   <div class="list" ng-if="isdir() && !closed()">
