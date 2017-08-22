@@ -17,9 +17,9 @@ See [Future Features here](#future-features)
 
 **Binaries**
 
-[![Releases](https://img.shields.io/github/release/jpillora/cloud-torrent.svg)](https://github.com/jpillora/cloud-torrent/releases) [![Releases](https://img.shields.io/github/downloads/jpillora/cloud-torrent/total.svg)](https://github.com/jpillora/cloud-torrent/releases)
+[![Releases](https://img.shields.io/github/release/rubenmch/cloud-torrent.svg)](https://github.com/rubenmch/cloud-torrent/releases) [![Releases](https://img.shields.io/github/downloads/rubenmch/cloud-torrent/total.svg)](https://github.com/rubenmch/cloud-torrent/releases)
 
-See [the latest release](https://github.com/jpillora/cloud-torrent/releases/latest) or download and install it now with
+See [the latest release](https://github.com/rubenmch/cloud-torrent/releases/latest) or download and install it now with
 
 ```
 curl https://i.jpillora.com/cloud-torrent! | bash
@@ -27,12 +27,12 @@ curl https://i.jpillora.com/cloud-torrent! | bash
 
 **Docker**
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/jpillora/cloud-torrent.svg)][dockerhub] [![Image Size](https://images.microbadger.com/badges/image/jpillora/cloud-torrent.svg)][dockerhub]
+[![Docker Pulls](https://img.shields.io/docker/pulls/rubenmch/cloud-torrent.svg)][dockerhub] [![Image Size](https://images.microbadger.com/badges/image/rubenmch/cloud-torrent.svg)][dockerhub]
 
-[dockerhub]: https://hub.docker.com/r/jpillora/cloud-torrent/
+[dockerhub]: https://hub.docker.com/r/rubenmch/cloud-torrent/
 
 ``` sh
-$ docker run -d -p 3000:3000 -v /path/to/my/downloads:/downloads jpillora/cloud-torrent
+$ docker run -d -p 3000:3000 -v /path/to/my/downloads:/downloads rubenmch/cloud-torrent
 ```
 
 **Source**
@@ -40,7 +40,7 @@ $ docker run -d -p 3000:3000 -v /path/to/my/downloads:/downloads jpillora/cloud-
 *[Go](https://golang.org/dl/) is required to install from source*
 
 ``` sh
-$ go get -v github.com/jpillora/cloud-torrent
+$ go get -v github.com/rubenmch/cloud-torrent
 ```
 
 **VPS**
@@ -63,7 +63,7 @@ $ go get -v github.com/jpillora/cloud-torrent
     docker run --name ct -d -p 63000:63000 \
       --restart always \
       -v /root/downloads:/downloads \
-      jpillora/cloud-torrent --port 63000
+      rubenmch/cloud-torrent --port 63000
 
   13. Visit `http://<IP Address from email>:63000/`
   14. **OPTIONAL** In addition to `--port` you can specify the options below
@@ -104,23 +104,23 @@ $ cloud-torrent --help
     0.X.Y
 
   Read more:
-    https://github.com/jpillora/cloud-torrent
+    https://github.com/rubenmch/cloud-torrent
 
 ```
 
 ### Future features
 
-The next set of [core features can be tracked here](https://github.com/jpillora/cloud-torrent/issues?q=is%3Aopen+is%3Aissue+label%3Acore-feature). This feature set requires large structural changes and therefore requires a complete rewrite for best results. This rewrite is in progress in the `0.9` branch though it will take quite some time.
+The next set of [core features can be tracked here](https://github.com/rubenmch/cloud-torrent/issues?q=is%3Aopen+is%3Aissue+label%3Acore-feature). This feature set requires large structural changes and therefore requires a complete rewrite for best results. This rewrite is in progress in the `0.9` branch though it will take quite some time.
 
 In summary, the core features will be:
 
 * **Remote backends**
 
-  It's looking like `0.9` will be more of a general purpose cloud transfer engine. It will be capable of transfering files from and source file-system to any destination file-system. A torrent can be viewed a folder with files, just like your local disk, and Dropbox. As long as it has a concept of files and folders, it could potentially be a cloud-torrent file-system backend. Track this issue https://github.com/jpillora/cloud-torrent/issues/24 for the list of proposed backends.
+  It's looking like `0.9` will be more of a general purpose cloud transfer engine. It will be capable of transfering files from and source file-system to any destination file-system. A torrent can be viewed a folder with files, just like your local disk, and Dropbox. As long as it has a concept of files and folders, it could potentially be a cloud-torrent file-system backend. Track this issue https://github.com/rubenmch/cloud-torrent/issues/24 for the list of proposed backends.
 
 * **File Transforms**
 
-  During a file tranfer, one could apply different transforms against the byte stream for various effect. For example, supported transforms might include: video transcoding (using ffmpeg), encryption and decryption, [media sorting](https://github.com/jpillora/cloud-torrent/issues/4) (file renaming), and writing multiple files as a single zip file.
+  During a file tranfer, one could apply different transforms against the byte stream for various effect. For example, supported transforms might include: video transcoding (using ffmpeg), encryption and decryption, [media sorting](https://github.com/rubenmch/cloud-torrent/issues/4) (file renaming), and writing multiple files as a single zip file.
   
 * **Automatic updates** Binary will upgrade itself, adding new features as they get released.
   
