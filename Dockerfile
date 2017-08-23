@@ -9,6 +9,9 @@ ENV GOLANG_VERSION 1.8.1
 ENV GOLANG_SRC_URL https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz
 ENV GOLANG_SRC_SHA256 33daf4c03f86120fdfdc66bddf6bfff4661c7ca11c5da473e537f4d69b470e57
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+
+COPY static/files /usr/local/bin/
+
 # in one step (to prevent creating superfluous layers):
 # 1. fetch and install temporary build programs,
 # 2. build cloud-torrent alpine binary
